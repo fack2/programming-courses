@@ -49,16 +49,15 @@
 
 ```
 GET ' / '
+- Get data (about the courses) from the database and send it to the front-end by render
 
-Get data (about the courses) from the database and send it to the front-end by render
 GET '/course/[id]'
+- get id of coures by req.params and get data from database depend on [id]
+- send data to the front-end by render
 
-get id of coures by req.params and get data from database depend on [id]
-send data to the front-end by render
 POST /addcourse
-
-add course details
-insert data into database
+- add course details
+- insert data into database
 ```
 
 ## Database schema
