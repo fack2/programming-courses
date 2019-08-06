@@ -70,12 +70,12 @@ To use our Repo without heroku database,you should:
 
 - git clone this repo
 - Put in terminal : npm install .
-- create database CREATE DATABASE ;
-- create uesrname and password CREATE USER ;
-- grant prinileges GRANT ALL PRIVILEGES ON DATABASE TO ;
-- make config.env file and put DATABASE_URL= postgres://uesrname:password@localhost:5432/dbname
-- Put in terminal : node database/db_build.js.
-- Then put in terminal : npm run dev to run the server.
+- create database **CREATE DATABASE** ;
+- create uesrname and password **CREATE USER** ;
+- grant prinileges **GRANT ALL PRIVILEGES ON DATABASE TO** ;
+- make config.env file and put **DATABASE_URL= postgres://uesrname:password@localhost:5432/dbname**
+- Put in terminal : **node database/db_build.js**.
+- Then put in terminal : **npm run dev** to run the server.
 
 ## Team members
 
