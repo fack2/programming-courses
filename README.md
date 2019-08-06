@@ -48,16 +48,17 @@
 ## endpoints
 
 ```
-1-  endpoint '/' => Home Page
-GET request => respond with html
-Display courses
+GET ' / '
 
-2- endPoint '/course/{id}' =>
-GET request => respond with html
-Display details about course
+Get data (about the courses) from the database and send it to the front-end by render
+GET '/course/[id]'
 
-3- endPoint '/addcourse' => add details
-POST request => insert into database
+get id of coures by req.params and get data from database depend on [id]
+send data to the front-end by render
+POST /addcourse
+
+add course details
+insert data into database
 ```
 
 ## Database schema
