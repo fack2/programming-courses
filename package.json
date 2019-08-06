@@ -1,0 +1,20 @@
+{
+  "name": "programming-courses",
+  "version": "1.0.0",
+  "description": "## user Journey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fack2/programming-courses.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fack2/programming-courses/issues"
+  },
+  "homepage": "https://github.com/fack2/programming-courses#readme"
+}
