@@ -20,8 +20,7 @@ CREATE TABLE courses
 INSERT INTO courses
     (name, description, costs, teacherName, available, courseTime, img)
 VALUES
-    ('Python', 'This course will introduce the core data structures of the Python programming language. We will move past the basics of procedural programming and explore how we can use the Python built-in data structures such as lists, dictionaries, and tuples to perform increasingly complex data analysis.', '95$', 'Peter W.', true, '12 weeks', 'https:
-//i.udemycdn.com/course/750x422/2023204_d2af_7.jpg'),
+    ('Python', 'This course will introduce the core data structures of the Python programming language. We will move past the basics of procedural programming and explore how we can use the Python built-in data structures such as lists, dictionaries, and tuples to perform increasingly complex data analysis.', '95$', 'Peter W.', true, '12 weeks', 'http://mtblogger.com/wp-content/uploads/2019/03/pythonimg.png'),
 
     ('Responsive Website Basics', 'In this course you will learn three key website programming and design languages: HTML, CSS and JavaScript. You will create a web page using basic elements to control layout and style. Additionally, your web page will support interactivity.', '100$', 'Lisa L', true, '20 weeks', 'https://res.cloudinary.com/practicaldev/image/fetch/s--wYj4DaGu--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://www.lambdatest.com/blog/wp-content/uploads/2018/05/Html-Css-Js-website.jpg'),
 
