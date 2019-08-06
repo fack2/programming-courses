@@ -2,14 +2,13 @@
 
 ## user Journey
 
-- as a user I should be able to sign up / login
-- as a user I will be able to search for a programming courses
+- as a user I will be able to see programming courses
 - as a user I should be able to see courses details
-- as a user with **role admin** can add courses
-- as a user I will be able to logout
+- as a user I should be able to add courses
 
 ## file structure
 
+```
 - public
 
   - style.css
@@ -32,25 +31,38 @@
     - error.js
     - index.js
 
-  - validation
-
-    - login.hbs
-    - signup.hbs
-
   - views
 
     - layouts
       - main.hbs
     - partials
       - header.hbs
+    - home.hbs
+    - course.hbs
+    - serverError.hbs
 
   - app.js
-
   - server.js
+```
+
+## endpoints
+
+```
+1-  endpoint '/' => Home Page
+GET request => respond with html
+Display courses
+
+2- endPoint '/course/{id}' =>
+GET request => respond with html
+Display details about course
+
+3- endPoint '/addcourse' => add details
+POST request => insert into database
+```
 
 ## Database schema
 
-![Untitled-Diagram-_4_](https://user-images.githubusercontent.com/47992412/62522333-27642800-b83a-11e9-9d37-856fda4ac7ce.png)
+![Untitled-Diagram-_5_](https://user-images.githubusercontent.com/47992412/62526882-c8ef7780-b842-11e9-8e96-7e41c2f1ebd8.png)
 
 ## Instructions :
 

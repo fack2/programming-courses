@@ -1,20 +1,44 @@
 {
-  "name": "programming-courses",
-  "version": "1.0.0",
-  "description": "## user Journey",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fack2/programming-courses.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/fack2/programming-courses/issues"
-  },
-  "homepage": "https://github.com/fack2/programming-courses#readme"
+    "name": "programming-courses",
+    "version": "1.0.0",
+    "description": "## user Journey",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon src/server.js",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/fack2/programming-courses.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/fack2/programming-courses/issues"
+    },
+    "homepage": "https://github.com/fack2/programming-courses#readme",
+    "dependencies": {
+        "env2": "^2.2.2",
+        "express": "^4.17.1",
+        "express-handlebars": "^3.1.0",
+        "pg": "^7.12.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^9.0.0",
+        "eslint": "^5.16.0",
+        "eslint-config-airbnb": "^17.1.1",
+        "eslint-config-prettier": "^4.3.0",
+        "eslint-config-wesbos": "0.0.19",
+        "eslint-plugin-html": "^5.0.5",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-prettier": "^3.1.0",
+        "eslint-plugin-react": "^7.14.3",
+        "eslint-plugin-react-hooks": "^1.6.1",
+        "nodemon": "^1.19.1",
+        "prettier": "^1.18.2"
+    }
 }
