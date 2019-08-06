@@ -1,16 +1,10 @@
 const dbConnection = require('../db_connection');
 
-const addCourse = (course, cb) => {
+const addCourse = course => {
     dbConnection.query(
-        'INSERT INTO courses (name, description, costs, teacherName, available, courseTime, img) VALUES ($1, $2, $3, $4, $5 , $6 , $7)', [course.name, course.description, course.costs, course.teacherName, course.available, course.courseTime, course.img],
-        (error, result) => {
-            if (error) {
-                cb(error);
-            } else {
-                cb(null, result);
-            }
-        },
-    );
+            'INSERT INTO courses (name, description, costs, teacherName, available, courseTime, img) VALUES ($1, $2, $3, $4, $5 , $6 , $7)', [course.name, course.description, course.costs, course.teacherName, course.available, course.courseTime, course.img])
+        .then(res => res.rows[0])
+        .catch(console.log)
 };
 
 module.exports = {
