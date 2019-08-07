@@ -1,32 +1,32 @@
-const express = require("express")
-const exphbs = require("express-handlebars")
-const path = require("path")
-const getData = require("./database/queries/getData")
-const getDataId = require("./database/queries/getDataId")
-const postData = require("./database/queries/postData")
-const helpers = require("./views/helpers/index")
+const express = require('express')
+const exphbs = require('express-handlebars')
+const path = require('path')
+const getData = require('./database/queries/getData')
+const getDataId = require('./database/queries/getDataId')
+const postData = require('./database/queries/postData')
+const helpers = require('./views/helpers/index')
 
 const app = express()
 app.use(express.urlencoded())
-app.use(express.static(path.join(__dirname, "..", "public")))
+app.use(express.static(path.join(__dirname, '..', 'public')))
 
-app.set("views", path.join(__dirname, "views"))
-app.set("view engine", "hbs")
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'hbs')
 app.engine(
-  "hbs",
+  'hbs',
   exphbs({
-    extname: "hbs",
-    layoutsDir: path.join(__dirname, "views", "layouts"),
-    defaultLayout: "main",
+    extname: 'hbs',
+    layoutsDir: path.join(__dirname, 'views', 'layouts'),
+    defaultLayout: 'main',
     helpers: helpers
   })
 )
 
-app.get("/", (req, res, next) => {
+app.get('/', (req, res, next) => {
   getData
     .getcourses()
     .then(course => {
-      res.render("home", {
+      res.render('home', {
         courses: course
       })
     })
@@ -35,11 +35,11 @@ app.get("/", (req, res, next) => {
     })
 })
 
-app.get("/course/:id", (req, res, next) => {
+app.get('/course/:id', (req, res, next) => {
   getDataId
     .getCoursesById(req.params.id)
     .then(course => {
-      res.render("course", {
+      res.render('course', {
         courses: course
       })
     })
@@ -48,21 +48,21 @@ app.get("/course/:id", (req, res, next) => {
     })
 })
 
-app.post("/addCourse", (req, res, next) => {
+app.post('/addCourse', (req, res, next) => {
   postData
     .addCourse(req.body)
     .then(() => {
-      res.redirect("/")
+      res.redirect('/')
     })
     .catch(err => {
       next(err)
     })
 })
 app.use((error, req, res, next) => {
-  res.status(500).render("serverError")
+  res.status(500).render('serverError')
 })
 app.use((req, res) => {
-  res.status(404).render("notFound")
+  res.status(404).render('notFound')
 })
 
 module.exports = app
