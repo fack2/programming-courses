@@ -1,15 +1,32 @@
+<img class="background" src="https://www.performancemagazine.org/wp-content/uploads/2016/05/programming-header.jpg">
+
 <div class="card">
-    <ul>
-        {{#each courses}}
-        <div class="container">
 
-            <a href={{link this.id}}> {{this.name}} </a>
-            <br>
-            <img src={{this.img}}>
+    {{#each courses}}
+    <div class="container">
 
-        </div>
-        {{/each}}
-    </ul>
+        <a class="text" href={{link this.id}}> {{this.name}} </a>
+        <br>
+        <img class="courseImg" src={{this.img}}>
+
+    </div>
+    {{/each}}
 
 </div>
+<div class="courseForm">
+    <form id="courseForm" class="courseForm" action="/addCourse" method="post">
+        <h3>Add Course</h3>
+    
+        <label>.<input placeholder="course name..."  name="name" required></label>
+        <label>.<input placeholder="description..."  name="description" required autofocus></label>
+        <label>.<input placeholder="costs..."  name="costs" required></label>
+        <label>.<input placeholder="teacher name..."  name="teacherName" required></label>
+        <label>.<input placeholder="available..?"  name="available" required></label>
+        <label>.<input placeholder="course time..." name="courseTime" required></label>
+        <label>.<input placeholder="image url" name="img" required></label>
+
+
+        <label>.<button name="submit" type="submit" id="course-submit" data-submit="...Sending">Submit</button></label>
+    
+    </form>
 </div>

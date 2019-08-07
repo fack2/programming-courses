@@ -1,1 +1,1 @@
-module.exports = id => `/course/${id}`;
+module.exports = id => `/course/${id}`

@@ -1,38 +1,38 @@
 {
-    "name": "programming-courses",
-    "version": "1.0.0",
-    "description": "## user Journey",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "nodemon src/server.js",
-        "lint": "eslint .",
-        "lint:fix": "eslint . --fix"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/fack2/programming-courses.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/fack2/programming-courses/issues"
-    },
-    "homepage": "https://github.com/fack2/programming-courses#readme",
-    "dependencies": {
-        "env2": "^2.2.2",
-        "express": "^4.17.1",
-        "express-handlebars": "^3.1.0",
-        "pg": "^7.12.0"
-    },
-    "devDependencies": {
-        "eslint": "^6.1.0",
-        "eslint-config-standard": "^13.0.1",
-        "eslint-plugin-import": "^2.18.2",
-        "eslint-plugin-node": "^9.1.0",
-        "eslint-plugin-promise": "^4.2.1",
-        "eslint-plugin-standard": "^4.0.0",
-        "nodemon": "^1.19.1"
-    }
+	"name": "programming-courses",
+	"version": "1.0.0",
+	"description": "## user Journey",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "nodemon src/server.js",
+		"lint": "eslint .",
+		"lint:fix": "node_modules/eslint/bin/eslint.js --fix ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/fack2/programming-courses.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/fack2/programming-courses/issues"
+	},
+	"homepage": "https://github.com/fack2/programming-courses#readme",
+	"dependencies": {
+		"env2": "^2.2.2",
+		"express": "^4.17.1",
+		"express-handlebars": "^3.1.0",
+		"pg": "^7.12.0"
+	},
+	"devDependencies": {
+		"eslint": "^6.1.0",
+		"eslint-config-standard": "^13.0.1",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-node": "^9.1.0",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-standard": "^4.0.0",
+		"nodemon": "^1.19.1"
+	}
 }
