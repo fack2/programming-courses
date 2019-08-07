@@ -1,6 +1,6 @@
 const dbConnection = require('../db_connection');
 
-const getcourses = () => dbConnection.query('SELECT name , img FROM courses;')
+const getcourses = () => dbConnection.query('SELECT id,name , img FROM courses;')
     .then(res => res.rows);
 
 
