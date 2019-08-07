@@ -1,15 +1,16 @@
+<img class="background" src="https://www.performancemagazine.org/wp-content/uploads/2016/05/programming-header.jpg">
+
 <div class="card">
-    <ul>
-        {{#each courses}}
-        <div class="container">
 
-            <a href={{link this.id}}> {{this.name}} </a>
-            <br>
-            <img src={{this.img}}>
+    {{#each courses}}
+    <div class="container">
 
-        </div>
-        {{/each}}
-    </ul>
+        <a class="text" href={{link this.id}}> {{this.name}} </a>
+        <br>
+        <img class="courseImg" src={{this.img}}>
+
+    </div>
+    {{/each}}
 
 </div>
 <div class="courseForm">
