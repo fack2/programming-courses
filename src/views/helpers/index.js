@@ -1,3 +1,3 @@
 module.exports = {
-    link: require('./linkcourse')
-};
+  link: require('./linkcourse')
+}
