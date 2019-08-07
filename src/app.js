@@ -8,7 +8,7 @@ const helpers = require('./views/helpers/index');
 
 
 const app = express()
-
+app.use(express.urlencoded())
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.set('views', path.join(__dirname, 'views'))
@@ -24,8 +24,11 @@ app.engine(
 )
 
 app.get('/', (req, res, next) => {
+    
     getData.getcourses()
         .then((course) => {
+
+        
             res.render('home', {
                 courses: course
             })
@@ -46,5 +49,21 @@ app.get('/course/:id', (req, res, next) => {
             next(err)
         })
 })
+
+
+app.post('/addCourse',(req,res,next)=>{
+    const {name,description,costs,teacherName,available,courseTime,img}=req.body;
+    const courseData = { name, description, costs, teacherName, available, courseTime, img }
+   
+    
+    postData.addCourse(courseData)
+        .then(()=>{
+            res.redirect('/')
+        })        
+        .catch(err=>{
+            next(err)
+        })
+})
+
 
 module.exports = app

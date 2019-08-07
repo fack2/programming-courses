@@ -1,7 +1,8 @@
 const dbConnection = require('../db_connection');
 
-const getcourses = () => dbConnection.query('SELECT id,name , img FROM courses;')
-    .then(res => res.rows);
+const getcourses = () => {
+    return (dbConnection.query('SELECT id,name , img FROM courses;')
+        .then(res => res.rows))} 
 
 
 module.exports = {
