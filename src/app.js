@@ -25,12 +25,12 @@ app.engine(
 app.get('/', (req, res, next) => {
   getData
     .getcourses()
-    .then((course) => {
+    .then(course => {
       res.render('home', {
         courses: course
       })
     })
-    .catch((err) => {
+    .catch(err => {
       next(err)
     })
 })
@@ -38,12 +38,12 @@ app.get('/', (req, res, next) => {
 app.get('/course/:id', (req, res, next) => {
   getDataId
     .getCoursesById(req.params.id)
-    .then((course) => {
+    .then(course => {
       res.render('course', {
         courses: course
       })
     })
-    .catch((err) => {
+    .catch(err => {
       next(err)
     })
 })
@@ -54,9 +54,15 @@ app.post('/addCourse', (req, res, next) => {
     .then(() => {
       res.redirect('/')
     })
-    .catch((err) => {
+    .catch(err => {
       next(err)
     })
+})
+app.use((error, req, res, next) => {
+  res.status(500).render('serverError')
+})
+app.use((req, res) => {
+  res.status(404).render('notFound')
 })
 
 module.exports = app
