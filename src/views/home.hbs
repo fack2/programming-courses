@@ -1,8 +1,9 @@
 <div>
     <ul>
         {{#each courses}}
-        <li> {{this.name}} </li>
-        <li> <img src={{this.img}}></li>
+
+        <li> <a href={{link id}}> {{name}} </a></li>
+        <li><img width="120px" height="120px" src={{this.img}}> </li>
         {{/each}}
     </ul>
 
