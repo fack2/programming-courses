@@ -1,5 +1,4 @@
-# programming-courses
-
+# [programming-courses](https://programming-courses.herokuapp.com/)
 ## user Journey
 
 - as a user I will be able to see programming courses
@@ -21,6 +20,7 @@
 
       - getData.js
       - postData.js
+      - getDataId.js
 
     - db_build.sql
     - db_build.js
@@ -37,9 +37,13 @@
       - main.hbs
     - partials
       - header.hbs
+    - helpers
+      - index.js
+      - linkcourse.js
     - home.hbs
     - course.hbs
     - serverError.hbs
+    - notFound.hbs
 
   - app.js
   - server.js
