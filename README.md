@@ -1,4 +1,4 @@
-# [programming-courses](https://programming-courses.herokuapp.com/)
+# [programming-courses](https://programming-courses.herokuapp.com/) :computer:
 ## user Journey
 
 - as a user I will be able to see programming courses
@@ -9,15 +9,12 @@
 
 ```
 - public
-
+  - styleCourse.css
   - style.css
 
 - src
-
   - database
-
     - queries
-
       - getData.js
       - postData.js
       - getDataId.js
@@ -27,12 +24,13 @@
     - db_connection.js
 
   - handlers
-
+    - home.js
+    - getCourse.js
+    - addCourse.js
     - error.js
     - index.js
 
   - views
-
     - layouts
       - main.hbs
     - partials
@@ -74,9 +72,9 @@ To use our Repo without heroku database,you should:
 
 - git clone this repo
 - Put in terminal : npm install .
-- create database **CREATE DATABASE** ;
-- create uesrname and password **CREATE USER** ;
-- grant prinileges **GRANT ALL PRIVILEGES ON DATABASE TO** ;
+- create database **CREATE DATABASE (dbName);** ;
+- create uesrname and password **CREATE USER (userName) with password (password);** ;
+- grant prinileges **GRANT ALL PRIVILEGES ON DATABASE (dbName) TO (userName);** ;
 - make config.env file and put **DATABASE_URL= postgres://uesrname:password@localhost:5432/dbname**
 - Put in terminal : **node database/db_build.js**.
 - Then put in terminal : **npm run dev** to run the server.
