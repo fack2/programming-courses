@@ -40,6 +40,7 @@
     - home.hbs
     - course.hbs
     - serverError.hbs
+    - notFound.hbs
 
   - app.js
   - server.js
