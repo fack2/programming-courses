@@ -1,0 +1,29 @@
+body {
+  background-color: #adc4b3;
+  text-align: left;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0px;
+}
+
+li {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  color: #030e1f;
+  list-style-type: none;
+  font-size: 25px;
+  text-align: left;
+  background-color: rgba(209, 179, 179, 0.3);
+  font-weight: bold;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border-radius: 5%;
+}
