@@ -37,6 +37,9 @@
       - main.hbs
     - partials
       - header.hbs
+    - helpers
+      - index.js
+      - linkcourse.js
     - home.hbs
     - course.hbs
     - serverError.hbs
